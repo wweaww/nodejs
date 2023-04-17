@@ -10,13 +10,11 @@ app.listen(port=8080,function(){
     console.log("포트번호 : " + port);
 });
 
-app.get("/write",function(req, res){
-    res.sendFile(__dirname+'/html/Write.html');
-});
+app.get("/",function(req, res){ res.sendFile(__dirname+'/index.html'); });
+app.get("/index.html",function(req, res){ res.sendFile(__dirname+'/index.html'); });
 
-app.get("/",function(req, res){
-    res.sendFile(__dirname+'/index.html');
-});
+app.use("/html", express.static(__dirname+'/html'));
+app.use("/image", express.static(__dirname+'/image'));
 app.use("/css", express.static(__dirname+'/css'));
 app.use("/js", express.static(__dirname+'/js'));
 
@@ -38,3 +36,24 @@ app.use("/js", express.static(__dirname+'/js'));
 // }, 10000);
 // console.log(2+" : "+module.exports.perimeter(100));
 // console.log(__dirname+'/css');
+
+const fs = require('fs');
+var forders = [];
+var i = 0;
+const inspectionFindFile = (destPath) => {
+    try {    
+       fs.readdirSync(destPath, { withFileTypes: true }).forEach((file) => {
+             const path = `${destPath}/${file.name}`;
+             if (file.isDirectory()) {
+                 inspectionFindFile(path);
+                 forders[i] = path;
+             } else {
+                 console.log("파일 명 : "+file.name);
+             }
+          });
+     } catch(err) {
+         return alert(err);
+     }
+ };
+ 
+ inspectionFindFile("C:\\Users\\zenit\\OneDrive\\바탕 화면\\code\\bone\\nodejs\\html");
