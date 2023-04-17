@@ -1,0 +1,63 @@
+body {
+	background-image: url(../images/back.png);
+    background-size: 100% auto;
+    background-position: center center;
+
+    transition:background-color 10s ease-out 100ms;
+    animation-name: slidein;
+    animation-duration: 10s;
+    /* animation-name: page_loop; */
+    /* animation-duration: 30s; */
+	animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+body:hover{ background-color: rgba(200,200,200,255); animation-play-state: paused; }
+body:not(:hover){ background-color: white; }
+/* opacity:0%;  */
+
+@keyframes slidein{
+    0% { background-image: url(../images/back.png); }
+    20% { background-image: url(../images/back-removebg.png); }
+    40% { background-image: url(../images/back-removebg.png); }
+    60% { background-image: url(../images/back2-removebg.png); }
+    80% { background-image: url(../images/back2-removebg.png); }
+    100% { background-image: url(../images/back2.png);}
+    30%, 70% { background-size: 30% auto; background-position: center; }
+    0%, 100% { background-size: 100% auto; }
+}
+
+@keyframes slidein2{
+    0% { background-image: url(../images/back.png), url(../images/back2.png); }
+    20% { background-image: url(../images/back-removebg.png), url(../images/back2-removebg.png); }
+    40% { background-image: url(../images/back-removebg.png), url(../images/back2-removebg.png); }
+    60% { background-image: url(../images/back2-removebg.png), url(../images/back-removebg.png); }
+    80% { background-image: url(../images/back2-removebg.png), url(../images/back-removebg.png); }
+    100% { background-image: url(../images/back2.png), url(../images/back.png); }
+    30%, 70% { background-size: 25% auto, 25% auto; }
+    0%, 100% { background-size: 50% auto, 50% auto; }
+}
+
+@keyframes page_loop{
+    0%, 100% { background-position-y: 50%; background-size: auto 100%; }
+    0% { background-image: url(../images/rotate/0\ \(3\).png); }
+    5% { background-image: url(../images/rotate/0\ \(4\).png); }
+    10% { background-image: url(../images/rotate/0\ \(7\).png); }
+    15% { background-image: url(../images/rotate/0\ \(11\).png); }
+    20% { background-image: url(../images/rotate/0\ \(13\).png); }
+    25% { background-image: url(../images/rotate/0\ \(14\).png); }
+    30% { background-image: url(../images/rotate/0\ \(17\).png); }
+    35% { background-image: url(../images/rotate/0\ \(20\).png); }
+    40% { background-image: url(../images/rotate/0\ \(21\).png); }
+    45% { background-image: url(../images/rotate/0\ \(25\).png); }
+    50% { background-image: url(../images/rotate/0\ \(26\).png); }
+    55% { background-image: url(../images/rotate/0\ \(27\).png); }
+    60% { background-image: url(../images/rotate/0\ \(28\).png); }
+    65% { background-image: url(../images/rotate/0\ \(32\).png); }
+    70% { background-image: url(../images/rotate/0\ \(34\).png); }
+    75% { background-image: url(../images/rotate/0\ \(35\).png); }
+    80% { background-image: url(../images/rotate/0\ \(38\).png); }
+    85% { background-image: url(../images/rotate/0\ \(39\).png); }
+    90% { background-image: url(../images/rotate/0\ \(41\).png); }
+    95% { background-image: url(../images/rotate/0\ \(52\).png); }
+    100% { background-image: url(../images/rotate/0\ \(54\).png); }
+}

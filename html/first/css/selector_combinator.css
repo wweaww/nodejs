@@ -1,0 +1,5 @@
+/*siblig_combinator*/
+/* h1+ul{} h1요소를 바로 뒤의 ul */
+/* h1~ul{} h1요소를 바로 앞의 ul */
+/* body h1 {} body태그 내부의 h1 */
+/* p > span {} - p태그 -> 모든태그 -> span */

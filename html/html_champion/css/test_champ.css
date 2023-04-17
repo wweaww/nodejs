@@ -1,0 +1,44 @@
+header { top:0px; }
+footer { bottom:0px; }
+header, footer{
+    text-align: center;
+    background-color: rgba(255, 173, 241, 0.7);
+    width:100%;
+    position:sticky;
+}
+.champ {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction:row;
+    width: 100%;
+    height: auto;
+}
+.champ img{
+    width:5%;
+    border: 1px solid white;
+    border-radius: 10%;
+}
+.champ img:hover{
+    border: 1px solid tomato;
+}
+
+header [type="button"] {
+    color:white;
+    background-color: rgb(100,100,100);
+}
+
+header [type="button"]:hover{
+    background-color: rgba(50,50,50);
+}
+
+header [type="button"]:active{
+    color: rgba(255, 0, 0, 255);
+    background-color: rgba(0, 0, 0, 255);
+}
+
+header [type="button"].check {
+    color: rgba(255, 0, 0, 255);
+    background-color: rgba(0, 0, 0, 255);
+}

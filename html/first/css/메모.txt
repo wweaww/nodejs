@@ -1,0 +1,72 @@
+[선택자 우선순위]
+!important : 무한대
+인라인 선언 방식 : 1000점
+id 선택자 : 100점
+class 선택자 : 10점
+태그 선택자 : 1점
+전체 선택자 : 0점
+부정 선택자 : 0점
+css의 같은 줄에 쓸 경우, 선택자 점수는 합산된다.
+
+[크기]
+px 고정크기(모니터 화소)
+rem 상대크기(font-size대응)
+em 부모의 상대크기(font-size대응)
+%
+vh
+
+[정렬]
+align-self: center; 세로중앙정렬
+text-align: center; 가로중앙정렬
+
+[위치고정]
+float와 별도로 나옴.
+다른 곳에는 clear: both;
+
+[앞에 점 없애기]
+ul, ol, summary{ list-style: none; }
+
+[애니메이션 넣을때 필수 태그 몇종]
+body:not(:hover){
+    background-color: rgba(63,63,63,127);
+    opacity:0%;
+
+    animation-name: slidein;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+[애니메이션]
+@keyframes slidein{
+    from {
+        background-image: url(../images/back.png);
+        background-size: 100% auto;
+    }
+    33% {
+        background-image: url(../images/back.png);
+        background-size: 66% auto;
+    }
+    66% {
+        background-image: url(../images/back2.png);
+        background-size: 66% auto;
+    }
+    to {
+        background-image: url(../images/back2.png);
+        background-size: 100% auto;
+    }
+}
+
+[가로 크기에 따른 변화]
+@media(max-width:800px){}
+@media(min-width:801px){}
+
+
+[상속]
+inherit(상속) initial(기본값) unser(상속되는 속성에만 상속)
+ul{ border:inherit; }
+
+
+/* linear-gradient(0deg, rgba(255,0,0,0.8), rgba(255,0,0,0) 70.71%),
+	linear-gradient(127deg, rgba(0,255,0,0.8), rgba(0,255,0,0) 70.71%), 
+	linear-gradient(336deg, rgba(0,0,255,0.8), rgba(0,0,255,0) 70.71%), */

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <!-- <base href="images/"> 태그설정시 불러오는 주소폴더 지정-->
+
+    <!--언어 및 사용하는 인터넷익스플로러 설정-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--제작자, 키워드 등 설정-->
+    <meta name="author" content="뼈햄">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="keywords" content="뼈햄, 코딩, HTML">
+    <meta name="description" content="HTML 코딩을 연습하는 페이지">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--아이콘 설정-->
+    <link rel="apple-touch-icon" sizes="72*72" href="../images/server-icon.png" />
+    <link rel="shortcut icon" href="../images/server-icon.png" />
+
+    <!--CSS 설정-->
+    <link href="css/test_champ.css" rel="stylesheet">
+    <link href="css/champ_content.css" rel="stylesheet">
+
+    <!--타이틀 설정-->
+    <title>챔피언 선택</title>
+
+    <!--스크립트 설정-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/var_func.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    
+</head>
+<body>
+    <header>
+        <input type="button" value="All" class="header_bt" onclick="showContent(0)">
+        <input type="button" value="Top" class="header_bt" onclick="showContent(1)">
+        <input type="button" value="Jungle" class="header_bt" onclick="showContent(2)">
+        <input type="button" value="Mid" class="header_bt" onclick="showContent(3)">
+        <input type="button" value="Bottom" class="header_bt" onclick="showContent(4)">
+        <input type="button" value="Suppot" class="header_bt" onclick="showContent(5);;">
+    </header>
+    <div class="container">
+        <div class="champ">
+            <img alt="가렌" id="가렌" class="All Top"/>
+            <img alt="갈리오" id="갈리오" class="All Mid"/>
+            <img alt="갱플랭크" id="갱플랭크" class="All Top"/>
+            <img alt="그라가스" id="그라가스" class="All Top Jungle Mid"/>
+            <img alt="그레이브즈" id="그레이브즈" class="All Jungle"/>
+            <img alt="그웬" id="그웬" class="All Top"/>
+            
+            <img alt="나르" id="나르" class="All Top"/>
+            <img alt="나미" id="나미" class="All Suppot"/>
+            <img alt="나서스" id="나서스" class="All Top"/>
+            <img alt="노틸러스" id="노틸러스" class="All Suppot"/>
+            <img alt="녹턴" id="녹턴" class="All Jungle"/>
+            <img alt="누누와윌럼프" id="누누와윌럼프" class="All Jungle"/>
+            <img alt="니달리" id="니달리" class="All Jungle"/>
+            <img alt="니코" id="니코" class="All Mid"/>
+            <img alt="닐라" id="닐라" class="All Bottom"/>
+
+            <img alt="다리우스" id="다리우스" class="All Top"/>
+            <img alt="다이애나" id="다이애나" class="All Jungle Mid"/>
+            <img alt="드레이븐" id="드레이븐" class="All Bottom"/>
+
+            <img alt="라이즈" id="라이즈" class="All Top Mid"/>
+            <img alt="라칸" id="라칸" class="All Suppot"/>
+            <img alt="람머스" id="람머스" class="All Jungle"/>
+            <img alt="럭스" id="럭스" class="All Mid Suppot"/>
+            <img alt="럼블" id="럼블" class="All Top Mid"/>
+            <img alt="레나타글라스크" id="레나타글라스크" class="All Suppot"/>
+            <img alt="레넥톤" id="레넥톤" class="All Top Mid"/>
+            <img alt="레오나" id="레오나" class="All Suppot"/>
+            <img alt="렉사이" id="렉사이" class="All Jungle"/>
+            <img alt="렐" id="렐" class="All Suppot"/>
+            <img alt="렝가" id="렝가" class="All Top Jungle"/>
+            <img alt="루시안" id="루시안" class="All Bottom"/>
+            <img alt="룰루" id="룰루" class="All Suppot"/>
+            <img alt="르블랑" id="르블랑" class="All Mid Suppot"/>
+            <img alt="리신" id="리신" class="All Jungle"/>
+            <img alt="리븐" id="리븐" class="All Top"/>
+            <img alt="리산드라" id="리산드라" class="All Mid"/>
+            <img alt="릴리아" id="릴리아" class="All Jungle"/>
+            
+            <img alt="마스터이" id="마스터이" class="All Jungle"/>
+            <img alt="마오카이" id="마오카이" class="All Top Jungle Suppot"/>
+            <img alt="말자하" id="말자하" class="All Mid"/>
+            <img alt="말파이트" id="말파이트" class="All Top Mid"/>
+            <img alt="모데카이저" id="모데카이저" class="All Top"/>
+            <img alt="모르가나" id="모르가나" class="All Suppot"/>
+            <img alt="문도박사" id="문도박사" class="All Top"/>
+            <img alt="미스포츈" id="미스포츈" class="All Bottom Suppot"/>
+            <img alt="밀리오" id="밀리오" class="All Suppot"/>
+
+            <img alt="바드" id="바드" class="All Suppot"/>
+            <img alt="바루스" id="바루스" class="All Bottom"/>
+            <img alt="바이" id="바이" class="All Jungle"/>
+            <img alt="베이가" id="베이가" class="All"/>
+            <img alt="베인" id="베인" class="All"/>
+            <img alt="벡스" id="벡스" class="All"/>
+            <img alt="벨베스" id="벨베스" class="All"/>
+            <img alt="벨코즈" id="벨코즈" class="All"/>
+            <img alt="볼리베어" id="볼리베어" class="All"/>
+            <img alt="브라움" id="브라움" class="All"/>
+            <img alt="브랜드" id="브랜드" class="All"/>
+            <img alt="블라디미르" id="블라디미르" class="All"/>
+            <img alt="블리츠크랭크" id="블리츠크랭크" class="All"/>
+            <img alt="비에고" id="비에고" class="All"/>
+            <img alt="빅토르" id="빅토르" class="All"/>
+            <img alt="뽀삐" id="뽀삐" class="All"/>
+
+            <img alt="사미라" id="사미라" class="All"/>
+            <img alt="사이온" id="사이온" class="All"/>
+            <img alt="사일러스" id="사일러스" class="All"/>
+            <img alt="샤코" id="샤코" class="All"/>
+            <img alt="세나" id="세나" class="All"/>
+            <img alt="세라핀" id="세라핀" class="All"/>
+            <img alt="세주아니" id="세주아니" class="All"/>
+            <img alt="세트" id="세트" class="All"/>
+            <img alt="소나" id="소나" class="All"/>
+            <img alt="소라카" id="소라카" class="All"/>
+            <img alt="쉔" id="쉔" class="All"/>
+            <img alt="쉬바나" id="쉬바나" class="All"/>
+            <img alt="스웨인" id="스웨인" class="All"/>
+            <img alt="스카너" id="스카너" class="All"/>
+            <img alt="시비르" id="시비르" class="All"/>
+            <img alt="신짜오" id="신짜오" class="All"/>
+            <img alt="신드라" id="신드라" class="All"/>
+            <img alt="신지드" id="신지드" class="All"/>
+            <img alt="쓰레쉬" id="쓰레쉬" class="All"/>
+
+            <img alt="아리" id="아리" class="All"/>
+            <img alt="아무무" id="아무무" class="All"/>
+            <img alt="아우렐리온솔" id="아우렐리온솔" class="All"/>
+            <img alt="아이번" id="아이번" class="All"/>
+            <img alt="아지르" id="아지르" class="All"/>
+            <img alt="아칼리" id="아칼리" class="All"/>
+            <img alt="아크샨" id="아크샨" class="All"/>
+            <img alt="아트록스" id="아트록스" class="All"/>
+            <img alt="아펠리오스" id="아펠리오스" class="All"/>
+            <img alt="알리스타" id="알리스타" class="All"/>
+            <img alt="애니" id="애니" class="All"/>
+            <img alt="애니비아" id="애니비아" class="All"/>
+            <img alt="애쉬" id="애쉬" class="All"/>
+            <img alt="야스오" id="야스오" class="All"/>
+            <img alt="에코" id="에코" class="All"/>
+            <img alt="엘리스" id="엘리스" class="All"/>
+            <img alt="오공" id="오공" class="All"/>
+            <img alt="오른" id="오른" class="All"/>
+            <img alt="오리아나" id="오리아나" class="All"/>
+            <img alt="올라프" id="올라프" class="All"/>
+            <img alt="요네" id="요네" class="All"/>
+            <img alt="요릭" id="요릭" class="All"/>
+            <img alt="우디르" id="우디르" class="All"/>
+            <img alt="우르곳" id="우르곳" class="All"/>
+            <img alt="워윅" id="워윅" class="All"/>
+            <img alt="유미" id="유미" class="All"/>
+            <img alt="이렐리아" id="이렐리아" class="All"/>
+            <img alt="이블린" id="이블린" class="All"/>
+            <img alt="이즈리얼" id="이즈리얼" class="All"/>
+            <img alt="일라오이" id="일라오이" class="All"/>
+
+            <img alt="자르반4세" id="자르반4세" class="All"/>
+            <img alt="자야" id="자야" class="All"/>
+            <img alt="자이라" id="자이라" class="All"/>
+            <img alt="자크" id="자크" class="All"/>
+            <img alt="잔나" id="잔나" class="All"/>
+            <img alt="잭스" id="잭스" class="All"/>
+            <img alt="제드" id="제드" class="All"/>
+            <img alt="제라스" id="제라스" class="All"/>
+            <img alt="조이" id="조이" class="All"/>
+            <img alt="직스" id="직스" class="All"/>
+            <img alt="진" id="진" class="All"/>
+            <img alt="질리언" id="질리언" class="All"/>
+            <img alt="징크스" id="징크스" class="All"/>
+            <img alt="초가스" id="초가스" class="All"/>
+
+            <img alt="카르마" id="카르마" class="All"/>
+            <img alt="카밀" id="카밀" class="All"/>
+            <img alt="카사딘" id="카사딘" class="All"/>
+            <img alt="카서스" id="카서스" class="All"/>
+            <img alt="카시오페아" id="카시오페아" class="All"/>
+            <img alt="카이사" id="카이사" class="All"/>
+            <img alt="카직스" id="카직스" class="All"/>
+            <img alt="카타리나" id="카타리나" class="All"/>
+            <img alt="칼리스타" id="칼리스타" class="All"/>
+            <img alt="케넨" id="케넨" class="All"/>
+            <img alt="케이틀린" id="케이틀린" class="All"/>
+            <img alt="케인" id="케인" class="All"/>
+            <img alt="케일" id="케일" class="All"/>
+            <img alt="코그모" id="코그모" class="All"/>
+            <img alt="퀸" id="퀸" class="All"/>
+            <img alt="크샨테" id="크샨테" class="All"/>
+            <img alt="클레드" id="클레드" class="All"/>
+            <img alt="키아나" id="키아나" class="All"/>
+            <img alt="킨드레드" id="킨드레드" class="All"/>
+
+            <img alt="타릭" id="타릭" class="All"/>
+            <img alt="탈론" id="탈론" class="All"/>
+            <img alt="탈리아" id="탈리아" class="All"/>
+            <img alt="탐켄치" id="탐켄치" class="All"/>
+            <img alt="트런들" id="트런들" class="All"/>
+            <img alt="트리스타나" id="트리스타나" class="All"/>
+            <img alt="트린다미어" id="트린다미어" class="All"/>
+            <img alt="트위스티드페이트" id="트위스티드페이트" class="All"/>
+            <img alt="트위치" id="트위치" class="All"/>
+            <img alt="티모" id="티모" class="All"/>
+
+            <img alt="파이크" id="파이크" class="All"/>
+            <img alt="판테온" id="판테온" class="All"/>
+            <img alt="피들스틱" id="피들스틱" class="All"/>
+            <img alt="피오라" id="피오라" class="All"/>
+            <img alt="피즈" id="피즈" class="All"/>
+
+            <img alt="하이머딩거" id="하이머딩거" class="All"/>
+            <img alt="헤카림" id="헤카림" class="All"/>
+        </div>
+        <hr>
+        <div class="contents">
+            무엇을 선택하시겠습니까?
+        </div>
+    </div>
+</body>
+</html>

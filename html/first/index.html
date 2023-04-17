@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <!-- <base href="images/"> 태그설정시 불러오는 주소폴더 지정-->
+
+    <!--언어 및 사용하는 인터넷익스플로러 설정-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--제작자, 키워드 등 설정-->
+    <meta name="author" content="뼈햄">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="keywords" content="뼈햄, 코딩, HTML">
+    <meta name="description" content="HTML 코딩을 연습하는 페이지">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--아이콘 설정-->
+    <link rel="apple-touch-icon" sizes="72*72" href="images/server-icon.png" />
+    <link rel="shortcut icon" href="images/server-icon.png" />
+
+    <!--CSS 설정-->
+    <link href="css/selector_universal.css" rel="stylesheet"><!--전체 선택자-->
+    <link href="css/selector_type.css" rel="stylesheet"><!--태그 선택자-->
+    <link href="css/selector_class.css" rel="stylesheet"><!--클래스 선택자-->
+    <link href="css/selector_id.css" rel="stylesheet"><!--아이디 선택자-->
+    <link href="css/selector_combinator.css" rel="stylesheet"><!--복합 선택자-->
+    <link href="css/selector_attribute.css" rel="stylesheet"><!--속성 선택자-->
+    <link href="css/selector_pseudo_class.css" rel="stylesheet"><!--가상 클래스 선택자-->
+    <link href="css/animation.css" rel="stylesheet"> <!--애니메이션-->
+    <link href="css/z-index.css" rel="stylesheet"> <!--디스플레이 순서-->
+
+    <!--타이틀 설정-->
+    <title>동민의 홈페이지</title>
+
+    <!--jquery 최신 설정-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!--스크립트 설정-->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    
+    <noscript>noscript태그 - 스크립트가 지원안할 때</noscript>
+
+</head>
+
+<body>
+    <svg width="100" height="100" class="mouse_move first">
+        <circle cx="50" cy="50" r="20" stroke="rgb(127,127,0)" stroke-width="2" fill="rgba(127,0,127,0)" />
+        <circle cx="50" cy="50" r="10" stroke="pink" stroke-width="2" fill="rgba(255,255,0,30)" />
+    </svg>
+    <svg width="100%" height="100%" class="pictures full first" style="position:absolute;">
+        
+    </svg>
+    <!-- 스페이스 대용 &nbsp; -->
+    <!--br태그 : 줄바꿈-->
+    <!--hr태그 : 줄생성-->
+    <!--hr속성 : size, width, align, color, noshade-->
+    <header>
+        <input type="button" value="내용 보이기" class="header_bt00" onclick="showContent(0)">
+        <input type="button" value="header2" class="header_bt01" onclick="showContent(1)">
+    </header>
+    <div class="container" style="display: none;">
+        <div class="left">
+            <script>
+                for (var i = 1; i <= 30; i++) { document.getElementsByClassName('left')[0].innerHTML += '<input type="button" value="list-item' + i + '" class="left_bt0"' + i + ' onclick=""><br>'; }
+            </script>
+        </div>
+        <div class="right">
+            <hr/>
+            <!------------------------------------------------------------->
+            <details>
+                <summary>배치방식 details</summary>
+                <blockquote>
+                    <details>
+                        <summary>table</summary>
+                        <table>
+                            <caption>table</caption>
+                            <colgroup> <col> <col span="1"> <col span="1"> </colgroup>
+                            <tr>
+                                <td> item1 </td>
+                                <td> item2 </td>
+                                <td> item3 </td>
+                            </tr>
+                            <tr>
+                                <td> item4 </td>
+                                <td> item5 </td>
+                                <td> item6 </td>
+                            </tr>
+                        </table>
+                    </details>
+                    <details>
+                        <summary>DL</summary>
+                        <dl>
+                            <dt>DL-DT</dt>
+                            <dd>DL-DD</dd>
+                        </dl>
+                    </details>
+                    <details>
+                        <summary>ul-li</summary>
+                        <ul>
+                            <li>ul-li-순서1</li>
+                            <li>ul-li-순서2</li>
+                            <li>ul-li-순서3</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>ol-li</summary>
+                        <ol start="10">
+                            <li>ol-li-순서1</li>
+                            <li>ol-li-순서2</li>
+                            <li>ol-li-순서3</li>
+                        </ol>
+                    </details>
+                    <details>
+                        <summary>blockquote</summary>
+                        <blockquote>들여쓰기</blockquote>
+                    </details>
+                    <details>
+                        <summary>input type</summary>
+                        <ol>
+                            <li>button<input type="button" value="버튼" /></li>
+                            <li>checkbox<input type="checkbox" checked /></li>
+                            <li>color<input type="color" value="#ff0000" /></li>
+                            <li>date<input type="date" value="2023-03-23" /></li>
+                            <li>datetime-local<input type="datetime-local" value="2023-03-23 12:00"></li>
+                            <li>email<input type="email" value="ehdalsdl21@gmail.com"></li>
+                            <li>file<input type="file"></li>
+                            <li>hidden<input type="hidden"></li>
+                            <li>image<input type="image" src="images/icon1000by1000.png" width="80" height="80"></li>
+                            <li>month<input type="month" value="2023-03"></li>
+                            <li>number<input type="number" max="9999999999" value="999999999"></li>
+                            <li>password<input type="password" value="팡어바보"></li>
+                            <li>radio<input type="radio" name="radio0" value="radio1" checked><input type="radio"
+                                    name="radio0" value="radio2"></li>
+                            <li>range<input type="range" value="0" min="0" max="100" step="10" /></li>
+                            <li>reset<input type="reset"></li>
+                            <li>search<input type="search"></li>
+                            <li>submit<input type="submit" value="submit"></li>
+                            <li>tel<input type="tel" value="010-3593-4038"></li>
+                            <li>text<input type="text" placeholder="텍스트 5글자를 입력하세요." maxlength="5" /></li>
+                            <li>time<input type="time" value="00:00:00"></li>
+                            <li>url<input type="url" value="http://www.naver.com"></li>
+                            <li>week<input type="week" value="2023-W16"></li>
+                            </ul>
+                            </p>
+                    </details>
+                </blockquote>
+            </details>
+            <hr/>
+            <!------------------------------------------------------------->
+            <details>
+                <summary>기능태그 details</summary>
+                <blockquote>
+                    <details>
+                        <summary>a태그 <br>- 속성 : download, href(tel:, mailto:), hrelang, rel, target(_blank, _parent,
+                            _self, _top, 프레임명), type </summary>
+                        <a rel="noopener" href="https://www.naver.com" target="_blank">네이버로 이동</a>
+                    </details>
+                    <details>
+                        <summary>abbr태그</summary>
+                        <abbr title="쭈루,팡어,뼈">쭈팡뼈</abbr>
+                    </details>
+                    <details>
+                        <summary>audio태그 <br>- 속성 : autoplay, controls, loop, muted, preload, src <br>- audio포멧 :
+                            mp3(mpeg), wav, ogg</summary>
+                        <audio controls>
+                            <source src="audios/goodbye선언.mp3" type="audio/mp3">지원안할 떄 나타나는 글자
+                        </audio>
+                    </details>
+                    <details>
+                        <summary>button태그</summary>
+                        <button name="bt1" value="default" type="submit" formaction="http://www.naver.com"
+                            onclick="alert('버튼을 누름')">버튼</button>
+                    </details>
+                    <details>
+                        <summary>template태그</summary>
+                        <p class="template1"></p>
+                        <button value="onclick" onclick="showContent1()">showContent</button>
+                        <button value="onclick" onclick="clearContent1()">clearContent</button>
+                    </details>
+                    <details>
+                        <summary>img, map-area<br>- 속성 : alt, coords, download, href, media, rel, target</summary>
+                        <img src="images/icon1000by1000.png" alt="뼈" usemap="#vending0"
+                            style="width:320px; height:320px" title="뼈">
+                        <map name="vending0">
+                            <area shape="rect" coords="0,0,320,320" alt="네이버" href="http://www.naver.com">
+                        </map>
+                    </details>
+                    <details>
+                        <summary>figure태그</summary>
+                        <figure>
+                            <img src="images/icon1000by1000.png" alt="뼈" style="width:320px; height:320px" title="뼈">
+                            <figcaption>figure-figcaption</figcaption>
+                        </figure>
+                    </details>
+                    <details>
+                        <summary>textarea태그</summary>
+                        <textarea cols="30" rows="10">안녕하세요
+            반갑습니다</textarea>
+                    </details>
+                    <details>
+                        <summary>canvas태그</summary>
+                        <canvas id="myCanvas" style="height:300px; width:300px; border: 2px solid black;">canvas 요소를
+                            지원하지 않을 때 나타납니다!</canvas>
+                    </details>
+                    <details>
+                        <summary>svg태그</summary>
+                        <svg width="100" height="100">
+                            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="rgb(255,255,255);" />
+                            <rect x="25" y="25" rx="5" ry="5" width="50" height="50"
+                                style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0);opacity:0.6;" />
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:rgb(0, 0, 0);stop-opacity:1" />
+                            </linearGradient>
+                            <ellipse cx="50" cy="50" rx="25" ry="25" fill="url(#grad1)" />
+                            <polygon points="50,15 27,78 78,28 24,28 78,78"
+                                style="fill:rgba(0, 0, 0, 0.5);stroke:rgba(103, 207, 255, 0.5);stroke-width:5;fill-rule:evenodd;" />
+                        </svg>
+                    </details>
+                    <details>
+                        <summary>select-option태그</summary>
+                        <select name="pet" multiple>
+                            <optgroup label="Pets">
+                                <option value="dog" selected>강아지</option>
+                                <option value="cat">고양이</option>
+                                <option value="hamster">햄스터</option>
+                                <option value="parrot">앵무새</option>
+                            </optgroup>
+                        </select>
+                    </details>
+                    <details>
+                        <summary>code태그</summary>
+                        <code>System.out.println(var);</code>
+                    </details>
+                    <details>
+                        <summary>data태그</summary>
+                        <data value="100">Value:100</data>
+                    </details>
+                    <details>
+                        <summary>form - fieldset태그 <br>- 데이터 전송시 필요</summary>
+                        <form action="phps/example.php" , method="post">
+                            <label for="fname">학과를 선택해주세요 : </label>
+                            <fieldset>
+                                <input type="text" id="text1" name="text1" list="textlist1" placeholder="텍스트">
+                                <datalist id="textlist1">
+                                    <option value="컴퓨터공학과" checked></option>
+                                    <option value="영어영문과"></option>
+                                    <option value="경영학과"></option>
+                                    <option value="사회체육과"></option>
+                                </datalist>
+                                <input type="submit" value="전송">
+                            </fieldset>
+                        </form>
+                    </details>
+                    <details>
+                        <summary>form - input/output태그 <br>- 자체 계산</summary>
+                        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)*parseInt(c.value)">
+                            <input type="number" id="a" value="0">
+                            +<input type="number" id="b" value="0">
+                            +<input type="number" id="c" value="0">
+                            =<output name="x" for="a b c"></output>
+                        </form>
+                    </details>
+                    <details>
+                        <summary>meter태그</summary>
+                        <meter id="disk_d" value="0.6">60%</meter>
+                    </details>
+                    <details>
+                        <summary>progress태그</summary>
+                        <progress value="32" max="100">32%</progress>
+                    </details>
+                    <details>
+                        <summary>dialog태그</summary>
+                        <dialog>
+                            <h2>Dialog</h2>
+                            <label for="money">숫자를 변경해보세요. 100단위</label>
+                            <input name="amount" id="money" type="number" min="0" step="100" value="100">
+                            <button type="submit" value="saving">입력</button>
+                        </dialog>
+                    </details>
+                    <details>
+                        <summary>embed태그<br>- 외부 컨텐츠 불러오기(외부사이트X)<br>- type : image/jpg, application/pdf 등 다양함</summary>
+                        <embed src="pdfs/HTML_CSS.pdf" type="application/pdf" />
+                        <embed src="mediatype_html/Media Types.html" height="100%" width="100%" allowfullscreen />
+                    </details>
+                    <details>
+                        <summary>iframe태그</summary>
+                        <iframe src="mediatype_html/Media Types.html" title="mediatype" height="320"
+                            width="320">iframe지원안함</iframe>
+                    </details>
+                    <details>
+                        <summary>object태그<br>- data : jpg, html, mp4, wav 등</summary>
+                        <object data="mediatype_html/Media Types.html" width="320" height="320">object</object>
+                        <object data="wavs/wav.wav"> <param name="autoplay" value="false"> </object>
+                    </details>
+                    <details>
+                        <summary>script태그</summary>
+                        <script>document.write("script로 내용작성");</script>
+                    </details>
+                    <details>
+                        <summary>video태그</summary>
+                        <video class="video1" controls>
+                            <source src="mp4/001.mp4" type="video/mp4" />
+                            <track kind="subtitles" srclang="en" src="vtts/001.vtt" label="English" default />
+                        </video>
+                    </details>
+                    <details>
+                        <summary>picture태그</summary>
+                        <picture>
+                            <source media="(width:50%)" srcset="images/icon1000by1000.png"">
+                                <img src=" images/back.png" alt="Flowers" style="width:auto;">
+                        </picture>
+                    </details>
+                </blockquote>
+            </details>
+            <hr/>
+            <!------------------------------------------------------------->
+            <details>
+                <summary>글자 기능 details</summary>
+                <blockquote>
+                    <dl>
+                        <li>굵게 <b>b</b>&nbsp;<strong>Strong</strong></li>
+                        <li>기울이기 <i>i</i>&nbsp;<em>em</em></li>
+                        <li>밑줄 <u>u</u>&nbsp;<ins>ins</ins></li>
+                        <li>중앙줄 <s>s</s>&nbsp;<del>del</del></li>
+                        <li>크게 <big>big</big></li>
+                        <li>작게 <small>small</small></li>
+                        <li>윗첨자 <sup>sup</sup></li>
+                        <li>아래첨자 <sub>sub</sub></li>
+                        <li>글자반대로<bdo dir="rtl">bdo</bdo></li>
+                        <li>요미가나 ruby<ruby>夏 <rp>(</rp>
+                                <rt>なつ</rt>
+                                <rp>)</rp>
+                            </ruby></li>
+                        <li>특수문자(이모티콘) &#x1f4ac; http://www.unicode.org/emoji/charts/full-emoji-list.html</li>
+                        <li>특수기능없이 문자스타일만 변경
+                            <cite>cite</cite>
+                            <dfn>dfn</dfn>
+                            <kbd>kbd</kbd>
+                            <mark>mark</mark>
+                            <q>q</q>
+                            <samp>samp</samp>
+                            <span>span</span>
+                        </li>
+                </blockquote>
+            </details>
+            <hr/>
+            <!------------------------------------------------------------->
+            <details>
+                <summary>box배치 방식 details</summary>
+                <blockquote>
+                    <h1>H1</h1>
+                    <h2>H2</h2>
+                    <h3>H3</h3>
+                    <h4>H4</h4>
+                    <h5>H5</h5>
+                    <h6>H6</h6>
+                    <pre>pre</pre>
+                    <address>address</address>
+                    <div>div</div>
+                    <article>article</article>
+                    <aside>aside</aside>
+                    <section>section</section>
+                </blockquote>
+            </details>
+            <hr/>
+            
+            <video class="video2">
+                <source src="mp4/001.mp4" type="video/mp4" style="display: none;"/>
+                <track kind="subtitles" srclang="en" src="vtts/001.vtt" label="English" default />
+            </video>
+        </div>
+    </div>
+
+    <footer>Footer <a href="tel:010-3593-4038" target="_blank">Tel:010-3593-4038</a> / <a href="mailto:ehdalsdl21@gmail.com" target="_blank">Mailto:ehdalsdl21@gmail.com</a></footer>
+    <template class="temp1">template 내용</template>    
+</body>
+</html>

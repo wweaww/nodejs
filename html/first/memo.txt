@@ -1,0 +1,18 @@
+통합개발환경(IDE) 구축
+High L Language
+
+프로그래밍 언어
+High Level Language
+
+컴파일러(번역기)
+
+기계어, 어셈블리어
+Low Level Language
+- cpu가 처리
+- 기계마다 다른 처리를 함
+
+소스파일(.c - 운영체제 unix)
+-컴파일러
+오브젝트파일(obj)
+-링커 +(라이버러리, 오브젝트파일)
+실행파일(exe)

@@ -1,0 +1,39 @@
+/* 링크 가상 클래스 선택자 & 유저 동적 가상 클래스 선택자
+    ::link(방문X), ::visited(방문O), ::active(클릭중), ::hover, ::focus
+*/
+/* 구조적 가상 클래스 선택자
+    ::root, ::nth-child(n), ::nth-last-child(n)
+    E::nth-of-type(n), E::nth-last-of-type(n)
+    ::first-child, ::last-child
+    E::first-of-type, E::last-of-type
+    ::only-child - 유일한 자식
+    E::only-of-type - E요소가 유일한 타입
+*/
+col:first-child { background-color: green; }
+col:nth-child(2) { background-color: yellow; }
+col:nth-child(3) { background-color: red; }
+tr:nth-child(2) td:nth-child(3){background-color: gray;}
+/* after, before, first-line, first-letter, placeholder */
+input::placeholder{ color: coral; }
+/* 언어 가상 클래스 선택자 E::lang(ko) */
+/* 부정 가상 클래스 선택자 E::not(S) */
+/* UI요소 상태 가상 클래스 선택자
+    E::enabled - 사용 가능한 form control E(input, textarea, select, button) 선택
+    E::disabled - 사용 불가능한 form control E(input, textarea, select, button) 선택
+    E::checked - 선택된 form control(input checked="checked")를 선택
+*/
+/* 가상 엘리먼트 선택자
+    E::first-line - E요소의 첫번째 라인
+    E::first-letter - E요소의 첫번째 문자
+    E::before - E요소의 시작지점
+    E::after - E요소의 끝지점
+*/
+details::first-line{ color: rgba(255,0,255,255); }
+details::first-letter{ color: green; }
+/*
+body::before{ content: "body::before"; color:red; font-weight: 900; }
+body::after{ content: "body::after"; color:red; font-weight: 900; }
+*/
+/* ::marker - li 등의 앞의 마커*/
+li::marker{ color: darkred; }
+
